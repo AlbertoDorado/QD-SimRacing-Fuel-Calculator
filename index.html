@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q&D SimRacing Fuel Calculator</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=OpenSans|Ubuntu"
+    />
+</head>
+<body>
+    <header>
+        <h1>Quick&Dirty<br />SimRacing Fuel Calculator</h1>
+        <a href="https://github.com/AlbertoDorado/QD-SimRacing-Fuel-Calculator">Github</a>
+    </header>
+
+    <!-- FUEL PER LAP -->
+    <section id="fuel_per_lap">
+        <h2>Fuel per lap</h2>
+        <fieldset class="controls">
+            <button class="parameter" type="button" onclick="updateParameter(fuelPerLap, -1)">
+                -1
+            </button>
+            <button class="parameter" type="button" onclick="updateParameter(fuelPerLap, -0.1)">
+                -0.1
+            </button>
+            <p id="fpl_value" class="field">
+                0.0
+            </p>
+            <button class="parameter" type="button" onclick="updateParameter(fuelPerLap, 0.1)">
+                +0.1
+            </button>
+            <button class="parameter" type="button" onclick="updateParameter(fuelPerLap, 1)">
+                +1
+            </button>
+        </fiel>
+    </section>
+
+    <!-- LAP TIME -->
+    <section id="lap_time">
+        <h2>Average lap time</h2>
+        <fieldset class="controls">
+            <button class="parameter" type="button" onclick="updateParameter(lapTime, -10)">
+                -10
+            </button>
+            <button class="parameter" type="button" onclick="updateParameter(lapTime, -1)">
+                -1
+            </button>
+            <p id="lt_value" class="field">
+                0.0
+            </p>
+            <button class="parameter" type="button" onclick="updateParameter(lapTime, 1)">
+                +1
+            </button>
+            <button class="parameter" type="button" onclick="updateParameter(lapTime, 10)">
+                +10
+            </button>
+        </fieldset>
+    </section>
+
+    <!-- RACE TIME -->
+    <section id="race_time">
+        <h2>Race time (min)</h2>
+        <fieldset class="controls">
+            <button class="parameter" type="button" onclick="updateParameter(raceTime, -10)">
+                -10
+            </button>
+            <button class="parameter" type="button" onclick="updateParameter(raceTime, -1)">
+                -1
+            </button>
+            <p id="rt_value" class="field">
+                0.0
+            </p>
+            <button class="parameter" type="button" onclick="updateParameter(raceTime, 1)">
+                +1
+            </button>
+            <button class="parameter" type="button" onclick="updateParameter(raceTime, 10)">
+                +10
+            </button>
+        </fieldset>
+    </section>
+
+    <section class="section_results">
+        <!-- TOTAL FUEL -->
+        <section id="total_fuel">
+            <h2 class="result_header">Total fuel</h2>
+            <p id="fuel_calculation" class="field result fuel_result">0.0</p>
+        </section>
+
+        <!-- TOTAL LAPS -->
+        <section id="total_laps">
+            <h2 class="result_header">Total laps</h2>
+            <p id="laps_calculation" class="field result">0.0</p>
+        </section>
+    </section>
+    <button type="button" onclick="reset()">RESET</button>
+</body>
+</html>
