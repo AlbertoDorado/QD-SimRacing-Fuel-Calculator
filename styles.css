@@ -40,11 +40,9 @@ p {
 }
 
 p.field {
-  display: inline-block;
   width: 2.3em;
   margin: 0em 0.5em;
-  vertical-align: center;
-  text-align: center;
+  padding: inherit;
 }
 
 p.result {
