@@ -1,14 +1,18 @@
 :root {
-  --main: #00695C;
-  --light: rgb(51, 135, 124);
-  --background: white;
-  --result: crimson;
+  --color-main: #00695C;
+  --color-light: rgb(51, 135, 124);
+  --color-background: white;
+  --color-inverse-font: white;
+  --color-result: crimson;
+  --font-main: "Open Sans", Arial, Helvetica, sans-serif;
+  --font-header: "Ubuntu", Arial, Helvetica, sans-serif;
 }
 
 body {
+  font-family: var(--font-main);
   text-align: center;
-  color: var(--main);
-  background-color: var(--background);
+  color: var(--color-main);
+  background-color: var(--color-background);
 }
 
 section {
@@ -16,26 +20,27 @@ section {
 }
 
 header {
-  background-color: var(--main);
-  color: white;
+  background-color: var(--color-main);
+  color:var(--color-inverse-font);
   margin: 0em;
   padding: 0.5em;
 }
 
+h1, h2 {
+  font-family: var(--font-header);
+}
+
 h1 {
-  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   font-size: 1.5em;
   margin: 0.2em;
 }
 
 h2 {
-  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   font-weight: normal;
   font-size: 1.1em;
 }
 
 p {
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-size: 2.2em;
 }
 
@@ -50,16 +55,15 @@ p.result {
 }
 
 p.fuel_result {
-  color: var(--result);
+  color: var(--color-result);
 }
 
 button {
-  background-color: var(--main);
+  background-color: var(--color-main);
   border: none;
-  color: white;
+  color: var(--color-inverse-font);
   text-decoration: none;
   display: inline-block;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-size: 1em;
   padding: 0.5em;
 }
@@ -72,13 +76,12 @@ button.parameter {
 }
 
 button:active {
-  background-color: var(--light);
+  background-color: var(--color-light);
 }
 
 a {
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-size: small;
-  color: white;
+  color: var(--color-inverse-font);
 }
 
 fieldset.controls {
