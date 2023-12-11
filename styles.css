@@ -16,7 +16,7 @@ body {
 }
 
 section {
-  padding: 0.5em;
+  margin: 0;
 }
 
 header {
@@ -46,8 +46,8 @@ p {
 
 p.field {
   width: 2.3em;
-  margin: 0em 0.5em;
-  padding: inherit;
+  margin: 0em 0.1em;
+  padding-top: inherit;
 }
 
 p.result {
@@ -88,6 +88,7 @@ fieldset.controls {
   display: flex;
   justify-content: center;
   border-width: 0;
+  margin: 0;
 }
 
 .section_results {
